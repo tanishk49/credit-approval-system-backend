@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Django
+*.sqlite3
+*.log
+.env
+
+# Celery (dev only)
+celerybeat-schedule
+celery_broker.sqlite
+celery_results.sqlite
+
+# Excel uploads
+*.xlsx
