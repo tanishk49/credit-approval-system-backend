@@ -43,6 +43,10 @@ credit-approval-system-backend/
 │   ├── urls.py                   # API routing
 │   └── views.py                  # API views
 │
+├── api_tests/                
+│   ├── register_test.http        # Test        
+|
+|
 ├── credit_system/                # Project config
 │   ├── __init__.py               # Celery import included
 │   ├── asgi.py
@@ -58,3 +62,4 @@ credit-approval-system-backend/
 ├── manage.py
 ├── requirements.txt              # Python dependencies
 └── README.md                     # Project documentation
+
