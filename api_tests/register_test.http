@@ -1,0 +1,13 @@
+### Test Register API
+POST http://localhost:8000/register
+Content-Type: application/json
+
+{
+  "customer_id": "C999",
+  "first_name": "Joseph",
+  "last_name": "Doe",
+  "phone_number": "9999999999",
+  "monthly_salary": 70000,
+  "approved_limit": 1800000,
+  "current_debt": 0
+}

@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Customer
 import math
+from uuid import uuid4
 
 @api_view(['POST'])
 def register_customer(request):
@@ -12,8 +13,12 @@ def register_customer(request):
     # Calculate approved limit
     approved_limit = math.floor(36 * monthly_salary / 100000) * 100000
 
+    # Generate a unique customer_id
+    customer_id = str(uuid4())[:8]  # Short UUID
+
     # Save customer
     customer = Customer.objects.create(
+        customer_id=customer_id,
         first_name=data.get("first_name"),
         last_name=data.get("last_name"),
         phone_number=data.get("phone_number"),
